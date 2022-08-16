@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="Order Details"
+        android:textColor="#fff"
+        android:textSize="25sp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="282dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/trackingborder"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Receiver Address :" />
+
+                    <TextView
+                        android:id="@+id/uimgurl"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Address"
+                        android:textColor="@color/black"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Receiver Name :" />
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Receiver Name"
+                        android:textColor="@color/black"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="18dp"
+                        android:text="Receiver Email :" />
+
+                    <TextView
+                        android:id="@+id/uemail"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:autoLink="email"
+                        android:hint="Receiver Email"
+                        android:textColorLink="#228ADC"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="107dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Receiver Phone Number :" />
+
+                    <TextView
+                        android:id="@+id/uphone"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:autoLink="phone"
+                        android:hint="Receiver Phone Number"
+                        android:textColorLink="#228ADC"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="75dp"
+                        android:text="Status :" />
+
+                    <TextView
+                        android:id="@+id/ustatus"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:text="Delivery start soon"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

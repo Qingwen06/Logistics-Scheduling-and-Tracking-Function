@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.driver.CusMapTrack">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="364dp"
+        android:layout_height="274dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="408dp"
+        android:layout_height="474dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!--        android:layout_marginTop="70dp"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="300dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/trackingborder"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Estimated Delivery Time"
+                    android:textColor="#5C5C5C"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/estimated_time"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="7 min"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Estimated Distance"
+                    android:textColor="#5C5C5C"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/rdistance"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1 KM"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/simpleProgressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="280dp"
+                    android:layout_height="70dp"
+                    android:indeterminate="true"
+                    android:max="100"
+                    android:padding="20dp"
+                    android:progress="50" />
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Your driver is heading your way. Hang in there!"
+                    android:textColor="#5C5C5C" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/trackingborder"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:text="Receiver Details"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="Receiver Name :"
+                        android:textColor="#5C5C5C" />
+
+                    <TextView
+                        android:id="@+id/rname"
+                        android:textIsSelectable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.5"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Receiver Name"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="Receiver Phone :\n(Press to Call)"
+                        android:textColor="#5C5C5C" />
+
+                    <TextView
+                        android:id="@+id/rphone"
+                        android:autoLink="phone"
+                        android:textColorLink="#228ADC"
+                        android:textIsSelectable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Receiver Phone"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="Receiver Email :\n(Press send Email)"
+                        android:textColor="#5C5C5C" />
+
+                    <TextView
+                        android:id="@+id/remail"
+                        android:textIsSelectable="true"
+                        android:autoLink="email"
+                        android:textColorLink="#228ADC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textStyle="bold"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Receiver Email"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="Receiver Address :"
+                        android:textColor="#5C5C5C" />
+
+                    <TextView
+                        android:id="@+id/raddress"
+                        android:textIsSelectable="true"
+                        android:layout_width="175dp"
+                        android:layout_height="50dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Receiver Address"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/trackingborder"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:text="Delivery Man Details"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="35dp"
+                        android:gravity="center"
+                        android:text="Delivery Man :"
+                        android:textColor="#5C5C5C" />
+
+                    <TextView
+                        android:id="@+id/deliveryman"
+                        android:textIsSelectable="true"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Delivery Man"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="Delivery Man ID :"
+                        android:textColor="#5C5C5C" />
+
+                    <TextView
+                        android:id="@+id/deliverymanID"
+                        android:textIsSelectable="true"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Delivery Man ID"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Delivery Man Phone Number :"
+                        android:textColor="#5C5C5C" />
+
+                    <TextView
+                        android:id="@+id/deliverymanPhone"
+                        android:textIsSelectable="true"
+                        android:autoLink="phone"
+                        android:textColorLink="#228ADC"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Delivery Man Phone Number"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Delivery Man Email Address :"
+                        android:textColor="#5C5C5C" />
+
+                    <TextView
+                        android:id="@+id/deliverymanEmail"
+                        android:textIsSelectable="true"
+                        android:autoLink="email"
+                        android:textColorLink="#228ADC"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Delivery Man Email Address"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/stalatitude"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/stalongitude"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/endlatitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="No latitude"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/endlongitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="No longitude"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

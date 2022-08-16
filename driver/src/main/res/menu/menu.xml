@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:icon="@drawable/menu">
+
+<!--    <item-->
+<!--        android:id="@+id/menu"-->
+<!--        android:icon="@drawable/menu"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:title="MENU" />-->
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/order_history"
+        android:title="Order History"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        app:showAsAction="never" />
+
+</menu>

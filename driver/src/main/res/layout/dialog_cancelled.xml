@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="Order Details"
+        android:textColor="#fff"
+        android:textSize="25sp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="657dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/trackingborder"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Receiver Address :" />
+
+                    <TextView
+                        android:id="@+id/uimgurl"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Address"
+                        android:textColor="@color/black"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Receiver Name :" />
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Receiver Name"
+                        android:textColor="@color/black"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="18dp"
+                        android:text="Receiver Email :" />
+
+                    <TextView
+                        android:id="@+id/uemail"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:autoLink="email"
+                        android:hint="Receiver Email"
+                        android:textColorLink="#228ADC"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="107dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Receiver Phone Number :" />
+
+                    <TextView
+                        android:id="@+id/uphone"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:autoLink="phone"
+                        android:hint="Receiver Phone Number"
+                        android:textColorLink="#228ADC"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="75dp"
+                        android:text="Status :" />
+
+                    <TextView
+                        android:id="@+id/ustatus"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Status"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Delivery Man Details"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Delivery Man Name :" />
+
+                    <TextView
+                        android:id="@+id/dname"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Driver Name"
+                        android:textIsSelectable="true"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="129dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Delivery Man Email Address :" />
+
+                    <TextView
+                        android:id="@+id/demail"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Driver Email"
+                        android:autoLink="email"
+                        android:textColorLink="#228ADC"
+                        android:textIsSelectable="true"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="129dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Delivery Man Phone Number :" />
+
+                    <TextView
+                        android:id="@+id/dphone"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Driver Phone"
+                        android:autoLink="phone"
+                        android:textColorLink="#228ADC"
+                        android:textIsSelectable="true"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Reason for Cancellation"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="129dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Reason :" />
+
+                    <TextView
+                        android:id="@+id/reason"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:hint="Reason"
+                        android:textIsSelectable="true"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
